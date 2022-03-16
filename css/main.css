@@ -1,0 +1,213 @@
+:root {
+    --gray-background-color: #ddd;
+    --blue-link: hsl(240, 65%, 50%);
+    --pink-link-hover: hsl(280, 65%, 50%);
+    font-size: 62.5%; /* 62.5% of 16px(default font-size) = 10px -> 1rem (1:1) */
+}
+
+
+body {
+    background-image: url(../img/funky-lines-background-pattern.png);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: hsl(0, 10%, 20%);
+    text-align: center;
+    margin: 0;
+}
+
+.background-card {
+    background-color: #eee;
+    max-width: 120rem;
+    margin: auto;
+    box-shadow: 0 0 10px #999;
+}
+
+
+/* ==================== HEADER ==================== */
+header {
+    background-color: var(--gray-background-color);
+    margin: 5rem 0 3rem;
+    padding: 2rem;
+}
+
+.header-title {
+    font-size: 4.3rem;
+}
+
+.header-title,
+.header-paragraph {
+    margin: 2rem 0;
+}
+
+
+/* ==================== MAIN ==================== */
+.first-line-break,
+.second-line-break {
+    border: 1px solid #000;
+    max-width: 27.5rem;
+    opacity: 0.3;
+}
+
+.first-line-break {
+    margin-top: 3rem;
+}
+
+.second-line-break {
+    margin-bottom: 3rem;
+}
+
+/* ~~~~~ PHOTO AND PORTRAIT ~~~~~ */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    padding: 1.5rem 0;
+    margin: auto;
+}
+
+.main-photo {
+    width: 95rem;
+}
+
+.portrait-photo {
+    border-radius: 50%;
+    width: 25rem;
+}
+
+/* 768px */
+@media screen and (max-width: 76.8em) {
+    .portrait-photo {
+        width: 20rem;
+    }
+}
+
+/* 480px */
+@media screen and (max-width: 48em) {
+    .portrait-photo {
+        width: 15rem;
+    }
+}
+
+/* ~~~~~ ARTICLE TEXT ~~~~~ */
+.tribute-article {
+    padding: 3rem;
+}
+
+.tribute-article h2 {
+    font-size: 3rem;
+}
+
+.tribute-section {
+    margin: auto;
+    max-width: 65rem;
+    padding: 1rem;
+}
+
+.section-title,
+.read-more-paragraph {
+    font-size: 2rem;
+}
+
+.section-paragraph,
+.header-paragraph,
+.main-photo-caption {
+    font-size: 1.7rem;
+    line-height: 2.8rem;
+}
+
+/* ~~~~~ QUOTE ~~~~~ */
+.quote-container {
+    max-width: 61rem;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+.quote-block,
+.quote-author {
+    font-size: 1.7rem;
+    font-style: italic;
+    line-height: 3rem;
+    position: relative;
+    margin: 0 0.5rem;
+    padding: 1rem 1.5rem;
+}
+
+.quote-author {
+    text-align: justify;
+    padding: 0 1.5rem;
+}
+
+.quote-block::before {
+    content: open-quote;
+    left: -1.2rem;
+    bottom: 1.1rem;
+}
+
+.quote-block::after {
+    content: close-quote;
+    top: 4rem;
+    right: -0.5rem;
+}
+
+.quote-block::before,
+.quote-block::after {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 7.5rem;
+    opacity: 0.5;
+    position: absolute;
+}
+
+/* ~~~~~ READ MORE ~~~~~ */
+.read-more {
+    background-color: var(--gray-background-color);
+    padding: 3rem;
+}
+
+.read-more-link {
+    text-decoration: none;
+    color: var(--blue-link);
+}
+
+.read-more-link:hover {
+    animation: tribute-link-color 500ms forwards;
+}
+
+@keyframes tribute-link-color {
+    100% {
+        color: var(--pink-link-hover);
+    }
+}
+
+
+/* ==================== FOOTER ==================== */
+footer {
+    margin-bottom: 1.5rem;
+}
+
+.footer-list {
+    list-style: none;
+    font-size: 1.5rem;
+    font-family: monospace;
+    line-height: 2.5rem;
+    padding: 0;
+}
+
+.li-name {
+    font-style: italic;
+    color: #000;
+}
+
+.li-github a {
+    text-decoration: none;
+    color: var(--blue-link);
+    font-weight: bold;
+}
+
+.li-github a:hover {
+    animation: github-link-color 500ms forwards;
+}
+
+@keyframes github-link-color {
+    100% {
+        color: var(--pink-link-hover);
+    }
+}
